@@ -1,0 +1,96 @@
+$date
+	Mon Mar 12 00:51:49 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	10ps
+$end
+$scope module tb_comparator_8bit $end
+$var wire 1 ! AltB $end
+$var wire 1 " AgtB $end
+$var wire 1 # AeqB $end
+$var reg 8 $ A [7:0] $end
+$var reg 8 % B [7:0] $end
+$var reg 1 & sign $end
+$scope module uut $end
+$var wire 8 ' A [7:0] $end
+$var wire 8 ( B [7:0] $end
+$var wire 1 & sign $end
+$var wire 1 ! AltB $end
+$var wire 1 " AgtB $end
+$var wire 1 # AeqB $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 (
+b0 '
+0&
+b0 %
+b0 $
+1#
+0"
+0!
+$end
+#2000
+b1111 %
+b1111 (
+b1111 $
+b1111 '
+#4000
+0#
+1"
+b11110000 $
+b11110000 '
+#6000
+0"
+1!
+b11100000 %
+b11100000 (
+b111100 $
+b111100 '
+#8000
+1"
+0!
+1&
+b11000011 $
+b11000011 '
+#10000
+0&
+b0 %
+b0 (
+b100000 $
+b100000 '
+#14000
+0"
+1!
+1&
+b11100000 $
+b11100000 '
+#16000
+b11100111 $
+b11100111 '
+#18000
+0!
+1#
+0&
+b0 $
+b0 '
+#20000
+1&
+#22000
+1!
+0#
+0&
+b10000000 %
+b10000000 (
+b1111 $
+b1111 '
+#24000
+1"
+0!
+1&
+#26000

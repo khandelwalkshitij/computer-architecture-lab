@@ -54,10 +54,10 @@ input d,clk,rst;
 
 always @(negedge clk or posedge rst)
 	begin
-	if(rst)
-	q <= 1'd0;
-	else 
-	q <= d;
+		if(rst)
+		q <= 1'd0;
+		else 
+		q <= d;
 	end
 endmodule
 
