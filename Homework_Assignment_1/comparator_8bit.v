@@ -42,6 +42,7 @@ module comparator_8bit(AeqB, AgtB, AltB, A, B, sign);
 	input [7:0] A, B ;
 	input sign ;
 
+	//Using Dataflow Modelling
 	assign AeqB = (A==B)? 1 : 0 ; 
 	assign AgtB = sign?(A[7]?(B[7]?(A<B):0):(B[7]?1:(A>B))):(A>B);
 	assign AltB = sign?(A[7]?(B[7]?(A>B):1):(B[7]?0:(A<B))):(A<B);
