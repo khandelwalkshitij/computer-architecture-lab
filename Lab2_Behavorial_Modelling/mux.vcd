@@ -1,0 +1,62 @@
+$date
+	Tue Jan 23 15:58:23 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	10ps
+$end
+$scope module tb_mux $end
+$var wire 1 ! o $end
+$var reg 4 " i [3:0] $end
+$var reg 2 # s [1:0] $end
+$scope module uut $end
+$var wire 4 $ in [3:0] $end
+$var wire 2 % select [1:0] $end
+$var reg 1 ! out $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx %
+b101 $
+bx #
+b101 "
+z!
+$end
+#2000
+1!
+b0 #
+b0 %
+#4000
+0!
+b1 #
+b1 %
+#6000
+1!
+b10 #
+b10 %
+#8000
+0!
+b11 #
+b11 %
+#10000
+1!
+b0 #
+b0 %
+b1001 "
+b1001 $
+#12000
+0!
+b1 #
+b1 %
+#14000
+b10 #
+b10 %
+#16000
+1!
+b11 #
+b11 %
+#18000

@@ -4,31 +4,31 @@
 
 module bcd_tb();
 
-reg rst,up_down,clock;
-wire [3:0] out;
+	reg rst,up_down,clock;
+	wire [3:0] out;
 
-bcd uut(out,rst,up_down,clock);
-
-
-always #10 clock = ~clock;
-	
-initial
-begin
-#00	clock = 1'b0;
-#10	rst=1'b1;
-#00 up_down=1'b1;
-#20 rst = 1'b0;
-#400 up_down = 1'b0;
-#40 rst= 1'b1;
-#60 $stop;
-end
+	bcd uut(out,rst,up_down,clock);
 
 
-initial
-begin
-$dumpfile("bcd.vcd");
-$dumpvars;
-end
+	always #10 clock = ~clock;
+		
+	initial
+	begin
+	#00	clock = 1'b0;
+	#10	rst=1'b1;
+	#00 up_down=1'b1;
+	#20 rst = 1'b0;
+	#400 up_down = 1'b0;
+	#40 rst= 1'b1;
+	#60 $stop;
+	end
+
+
+	initial
+	begin
+	$dumpfile("bcd.vcd");
+	$dumpvars;
+	end
 		
 endmodule
 
@@ -54,8 +54,3 @@ begin
 				out <= out-4'b0001;
 	end
 endmodule
-
-	
-	
-
-
