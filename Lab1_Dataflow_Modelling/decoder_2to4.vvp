@@ -1,0 +1,80 @@
+#! c:/iverilog-x86/bin/vvp
+:ivl_version "10.0 (stable)" "(v10_0)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 11;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_031a3260 .scope module, "tb_decoder_2to4" "tb_decoder_2to4" 2 3;
+ .timescale -9 -11;
+v031ae5a0_0 .var "a0", 0 0;
+v031ae5f8_0 .var "a1", 0 0;
+v031ae8b8_0 .net "d", 3 0, L_031ae700;  1 drivers
+S_031a3330 .scope module, "uut" "decoder_2to4" 2 6, 2 30 0, S_031a3260;
+ .timescale -9 -11;
+    .port_info 0 /OUTPUT 4 "y"
+    .port_info 1 /INPUT 1 "a1"
+    .port_info 2 /INPUT 1 "a0"
+L_031a9610 .functor NOT 1, v031ae5a0_0, C4<0>, C4<0>, C4<0>;
+L_031a9778 .functor NOT 1, v031ae5f8_0, C4<0>, C4<0>, C4<0>;
+L_031a9970 .functor AND 1, L_031a9610, L_031a9778, C4<1>, C4<1>;
+L_031a92f8 .functor NOT 1, v031ae5f8_0, C4<0>, C4<0>, C4<0>;
+L_031a95c8 .functor AND 1, v031ae5a0_0, L_031a92f8, C4<1>, C4<1>;
+L_031a94a8 .functor NOT 1, v031ae5a0_0, C4<0>, C4<0>, C4<0>;
+L_031a99b8 .functor AND 1, L_031a94a8, v031ae5f8_0, C4<1>, C4<1>;
+L_031a94f0 .functor AND 1, v031ae5a0_0, v031ae5f8_0, C4<1>, C4<1>;
+v03093f68_0 .net *"_s10", 0 0, L_031a92f8;  1 drivers
+v030918a0_0 .net *"_s12", 0 0, L_031a95c8;  1 drivers
+v030918f8_0 .net *"_s16", 0 0, L_031a94a8;  1 drivers
+v03091950_0 .net *"_s18", 0 0, L_031a99b8;  1 drivers
+v031ae548_0 .net *"_s2", 0 0, L_031a9610;  1 drivers
+v031ae7b0_0 .net *"_s23", 0 0, L_031a94f0;  1 drivers
+v031ae910_0 .net *"_s4", 0 0, L_031a9778;  1 drivers
+v031aea70_0 .net *"_s6", 0 0, L_031a9970;  1 drivers
+v031ae758_0 .net "a0", 0 0, v031ae5a0_0;  1 drivers
+v031ae968_0 .net "a1", 0 0, v031ae5f8_0;  1 drivers
+v031ae860_0 .net "y", 3 0, L_031ae700;  alias, 1 drivers
+L_031ae700 .concat8 [ 1 1 1 1], L_031a9970, L_031a95c8, L_031a99b8, L_031a94f0;
+    .scope S_031a3260;
+T_0 ;
+    %delay 0, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v031ae5f8_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v031ae5a0_0, 0, 1;
+    %delay 2000, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v031ae5f8_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v031ae5a0_0, 0, 1;
+    %delay 2000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v031ae5f8_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v031ae5a0_0, 0, 1;
+    %delay 2000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v031ae5f8_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v031ae5a0_0, 0, 1;
+    %delay 2000, 0;
+    %vpi_call 2 14 "$stop" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_031a3260;
+T_1 ;
+    %vpi_call 2 19 "$monitor", "time=%3d, a1=%b, a0=%b, d=%2b", $time, v031ae5f8_0, v031ae5a0_0, v031ae8b8_0 {0 0 0};
+    %end;
+    .thread T_1;
+    .scope S_031a3260;
+T_2 ;
+    %vpi_call 2 24 "$dumpfile", "decoder_2to4.vcd" {0 0 0};
+    %vpi_call 2 25 "$dumpvars" {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "decoder_2to4.v";

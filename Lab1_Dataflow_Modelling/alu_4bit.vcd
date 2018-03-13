@@ -1,0 +1,85 @@
+$date
+	Tue Jan 16 15:50:05 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	10ps
+$end
+$scope module tb_alu_4bit $end
+$var wire 4 ! out [3:0] $end
+$var reg 4 " a [3:0] $end
+$var reg 4 # b [3:0] $end
+$var reg 3 $ op [2:0] $end
+$scope module uut $end
+$var wire 4 % a [3:0] $end
+$var wire 4 & b [3:0] $end
+$var wire 3 ' op [2:0] $end
+$var wire 4 ( y2 [3:0] $end
+$var wire 4 ) y3 [3:0] $end
+$var wire 4 * y4 [3:0] $end
+$var wire 4 + y7 [3:0] $end
+$var wire 4 , y6 [3:0] $end
+$var wire 4 - y5 [3:0] $end
+$var wire 4 . y1 [3:0] $end
+$var wire 4 / y0 [3:0] $end
+$var wire 4 0 out [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b100 0
+b100 /
+b1010 .
+b11 -
+b1110 ,
+b11 +
+b111 *
+b11 )
+b100 (
+b0 '
+b11 &
+b111 %
+b0 $
+b11 #
+b111 "
+b100 !
+$end
+#2000
+b1010 !
+b1010 0
+b1 $
+b1 '
+#4000
+b100 !
+b100 0
+b10 $
+b10 '
+#6000
+b11 !
+b11 0
+b11 $
+b11 '
+#8000
+b111 !
+b111 0
+b100 $
+b100 '
+#10000
+b11 !
+b11 0
+b101 $
+b101 '
+#12000
+b1110 !
+b1110 0
+b110 $
+b110 '
+#14000
+b11 !
+b11 0
+b111 $
+b111 '
+#16000

@@ -1,0 +1,157 @@
+#! c:/iverilog-x86/bin/vvp
+:ivl_version "10.0 (stable)" "(v10_0)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 11;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_048472f0 .scope module, "tb_alu_4bit" "tb_alu_4bit" 2 12;
+ .timescale -9 -11;
+v0484f790_0 .var "a", 3 0;
+v0484fc60_0 .var "b", 3 0;
+v0484f630_0 .var "op", 2 0;
+v0484f948_0 .net "out", 3 0, L_048504f8;  1 drivers
+S_001b3260 .scope module, "uut" "alu_4bit" 2 17, 2 44 0, S_048472f0;
+ .timescale -9 -11;
+    .port_info 0 /OUTPUT 4 "out"
+    .port_info 1 /INPUT 4 "a"
+    .port_info 2 /INPUT 4 "b"
+    .port_info 3 /INPUT 3 "op"
+L_04852260 .functor XOR 4, v0484f790_0, v0484fc60_0, C4<0000>, C4<0000>;
+L_04852458 .functor AND 4, v0484f790_0, v0484fc60_0, C4<1111>, C4<1111>;
+L_04852140 .functor OR 4, v0484f790_0, v0484fc60_0, C4<0000>, C4<0000>;
+v04841b58_0 .net *"_s12", 2 0, L_0484fbb0;  1 drivers
+L_04880c38 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v04841bb0_0 .net *"_s14", 0 0, L_04880c38;  1 drivers
+v04841a50_0 .net *"_s18", 2 0, L_0484f898;  1 drivers
+L_04880c60 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v04841c08_0 .net *"_s20", 0 0, L_04880c60;  1 drivers
+v04841fd0_0 .net *"_s23", 0 0, L_0484f9a0;  1 drivers
+v04841948_0 .net *"_s25", 2 0, L_0484fa50;  1 drivers
+v048419f8_0 .net *"_s29", 0 0, L_0484fb00;  1 drivers
+v04841c60_0 .net *"_s31", 0 0, L_0484fd68;  1 drivers
+v04841ec8_0 .net *"_s33", 0 0, L_0484fc08;  1 drivers
+v04841cb8_0 .net *"_s34", 3 0, L_04850550;  1 drivers
+v04841d10_0 .net *"_s37", 0 0, L_048500d8;  1 drivers
+v04841e70_0 .net *"_s38", 3 0, L_04850130;  1 drivers
+v04841d68_0 .net *"_s40", 3 0, L_048501e0;  1 drivers
+v04841dc0_0 .net *"_s43", 0 0, L_04850238;  1 drivers
+v04841e18_0 .net *"_s45", 0 0, L_04850188;  1 drivers
+v0484fe18_0 .net *"_s46", 3 0, L_04850290;  1 drivers
+v0484f7e8_0 .net *"_s49", 0 0, L_048502e8;  1 drivers
+v0484ff20_0 .net *"_s50", 3 0, L_048504a0;  1 drivers
+v0484fb58_0 .net *"_s52", 3 0, L_04850340;  1 drivers
+v0484f840_0 .net "a", 3 0, v0484f790_0;  1 drivers
+v0484f5d8_0 .net "b", 3 0, v0484fc60_0;  1 drivers
+v0484ff78_0 .net "op", 2 0, v0484f630_0;  1 drivers
+v0484f6e0_0 .net "out", 3 0, L_048504f8;  alias, 1 drivers
+v0484fcb8_0 .net "y0", 3 0, L_0484f688;  1 drivers
+v0484ffd0_0 .net "y1", 3 0, L_0484fe70;  1 drivers
+v0484f8f0_0 .net "y2", 3 0, L_04852260;  1 drivers
+v04850080_0 .net "y3", 3 0, L_04852458;  1 drivers
+v0484f738_0 .net "y4", 3 0, L_04852140;  1 drivers
+v0484fdc0_0 .net "y5", 3 0, L_0484fd10;  1 drivers
+v0484f9f8_0 .net "y6", 3 0, L_04850028;  1 drivers
+v0484fec8_0 .net "y7", 3 0, L_0484faa8;  1 drivers
+L_0484f688 .arith/sub 4, v0484f790_0, v0484fc60_0;
+L_0484fe70 .arith/sum 4, v0484f790_0, v0484fc60_0;
+L_0484fbb0 .part v0484f790_0, 1, 3;
+L_0484fd10 .concat [ 3 1 0 0], L_0484fbb0, L_04880c38;
+L_0484f898 .part v0484f790_0, 0, 3;
+L_04850028 .concat [ 1 3 0 0], L_04880c60, L_0484f898;
+L_0484f9a0 .part v0484f790_0, 3, 1;
+L_0484fa50 .part v0484f790_0, 1, 3;
+L_0484faa8 .concat [ 3 1 0 0], L_0484fa50, L_0484f9a0;
+L_0484fb00 .part v0484f630_0, 2, 1;
+L_0484fd68 .part v0484f630_0, 1, 1;
+L_0484fc08 .part v0484f630_0, 0, 1;
+L_04850550 .functor MUXZ 4, L_04850028, L_0484faa8, L_0484fc08, C4<>;
+L_048500d8 .part v0484f630_0, 0, 1;
+L_04850130 .functor MUXZ 4, L_04852140, L_0484fd10, L_048500d8, C4<>;
+L_048501e0 .functor MUXZ 4, L_04850130, L_04850550, L_0484fd68, C4<>;
+L_04850238 .part v0484f630_0, 1, 1;
+L_04850188 .part v0484f630_0, 0, 1;
+L_04850290 .functor MUXZ 4, L_04852260, L_04852458, L_04850188, C4<>;
+L_048502e8 .part v0484f630_0, 0, 1;
+L_048504a0 .functor MUXZ 4, L_0484f688, L_0484fe70, L_048502e8, C4<>;
+L_04850340 .functor MUXZ 4, L_048504a0, L_04850290, L_04850238, C4<>;
+L_048504f8 .functor MUXZ 4, L_04850340, L_048501e0, L_0484fb00, C4<>;
+    .scope S_048472f0;
+T_0 ;
+    %delay 0, 0;
+    %pushi/vec4 0, 0, 3;
+    %store/vec4 v0484f630_0, 0, 3;
+    %pushi/vec4 7, 0, 4;
+    %store/vec4 v0484f790_0, 0, 4;
+    %pushi/vec4 3, 0, 4;
+    %store/vec4 v0484fc60_0, 0, 4;
+    %delay 2000, 0;
+    %pushi/vec4 1, 0, 3;
+    %store/vec4 v0484f630_0, 0, 3;
+    %pushi/vec4 7, 0, 4;
+    %store/vec4 v0484f790_0, 0, 4;
+    %pushi/vec4 3, 0, 4;
+    %store/vec4 v0484fc60_0, 0, 4;
+    %delay 2000, 0;
+    %pushi/vec4 2, 0, 3;
+    %store/vec4 v0484f630_0, 0, 3;
+    %pushi/vec4 7, 0, 4;
+    %store/vec4 v0484f790_0, 0, 4;
+    %pushi/vec4 3, 0, 4;
+    %store/vec4 v0484fc60_0, 0, 4;
+    %delay 2000, 0;
+    %pushi/vec4 3, 0, 3;
+    %store/vec4 v0484f630_0, 0, 3;
+    %pushi/vec4 7, 0, 4;
+    %store/vec4 v0484f790_0, 0, 4;
+    %pushi/vec4 3, 0, 4;
+    %store/vec4 v0484fc60_0, 0, 4;
+    %delay 2000, 0;
+    %pushi/vec4 4, 0, 3;
+    %store/vec4 v0484f630_0, 0, 3;
+    %pushi/vec4 7, 0, 4;
+    %store/vec4 v0484f790_0, 0, 4;
+    %pushi/vec4 3, 0, 4;
+    %store/vec4 v0484fc60_0, 0, 4;
+    %delay 2000, 0;
+    %pushi/vec4 5, 0, 3;
+    %store/vec4 v0484f630_0, 0, 3;
+    %pushi/vec4 7, 0, 4;
+    %store/vec4 v0484f790_0, 0, 4;
+    %pushi/vec4 3, 0, 4;
+    %store/vec4 v0484fc60_0, 0, 4;
+    %delay 2000, 0;
+    %pushi/vec4 6, 0, 3;
+    %store/vec4 v0484f630_0, 0, 3;
+    %pushi/vec4 7, 0, 4;
+    %store/vec4 v0484f790_0, 0, 4;
+    %pushi/vec4 3, 0, 4;
+    %store/vec4 v0484fc60_0, 0, 4;
+    %delay 2000, 0;
+    %pushi/vec4 7, 0, 3;
+    %store/vec4 v0484f630_0, 0, 3;
+    %pushi/vec4 7, 0, 4;
+    %store/vec4 v0484f790_0, 0, 4;
+    %pushi/vec4 3, 0, 4;
+    %store/vec4 v0484fc60_0, 0, 4;
+    %delay 2000, 0;
+    %vpi_call 2 29 "$stop" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_048472f0;
+T_1 ;
+    %vpi_call 2 34 "$monitor", "time=%3d, a=%4d, b=%4d, op=%3d, out=%7d", $time, v0484f790_0, v0484fc60_0, v0484f630_0, v0484f948_0 {0 0 0};
+    %end;
+    .thread T_1;
+    .scope S_048472f0;
+T_2 ;
+    %vpi_call 2 39 "$dumpfile", "alu_4bit.vcd" {0 0 0};
+    %vpi_call 2 40 "$dumpvars" {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "alu_4bit.v";

@@ -59,5 +59,6 @@ assign y6 = a << 1'b1 ;
 assign y7 = {a[3],a[3:1]} ; 
 
 assign out = op[2]?(op[1]?(op[0]?y7:y6):(op[0]?y5:y4)):(op[1]?(op[0]?y3:y2):(op[0]?y1:y0)); 
+//what output is to be printed will be decided on the three bit opcode
 endmodule 
 

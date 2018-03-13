@@ -1,0 +1,70 @@
+#! c:/iverilog-x86/bin/vvp
+:ivl_version "10.0 (stable)" "(v10_0)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 11;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_047f3e40 .scope module, "tb_half_adder" "tb_half_adder" 2 3;
+ .timescale -9 -11;
+v031a8658_0 .net "c", 0 0, L_031a3408;  1 drivers
+v031a86b0_0 .net "s", 0 0, L_047f3938;  1 drivers
+v031a8708_0 .var "x", 0 0;
+v031a3260_0 .var "y", 0 0;
+S_047f3f10 .scope module, "uut" "half_adder" 2 8, 2 29 0, S_047f3e40;
+ .timescale -9 -11;
+    .port_info 0 /OUTPUT 1 "sum"
+    .port_info 1 /OUTPUT 1 "carry"
+    .port_info 2 /INPUT 1 "a"
+    .port_info 3 /INPUT 1 "b"
+L_047f3938/d .functor XOR 1, v031a8708_0, v031a3260_0, C4<0>, C4<0>;
+L_047f3938 .delay 1 (1500,1500,1500) L_047f3938/d;
+L_031a3408/d .functor AND 1, v031a8708_0, v031a3260_0, C4<1>, C4<1>;
+L_031a3408 .delay 1 (1000,1000,1000) L_031a3408/d;
+v031a8938_0 .net "a", 0 0, v031a8708_0;  1 drivers
+v047f38e0_0 .net "b", 0 0, v031a3260_0;  1 drivers
+v031a85a8_0 .net "carry", 0 0, L_031a3408;  alias, 1 drivers
+v031a8600_0 .net "sum", 0 0, L_047f3938;  alias, 1 drivers
+    .scope S_047f3e40;
+T_0 ;
+    %delay 0, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v031a8708_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v031a3260_0, 0, 1;
+    %delay 2000, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v031a8708_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v031a3260_0, 0, 1;
+    %delay 2000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v031a8708_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v031a3260_0, 0, 1;
+    %delay 2000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v031a8708_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v031a3260_0, 0, 1;
+    %delay 2000, 0;
+    %vpi_call 2 16 "$stop" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_047f3e40;
+T_1 ;
+    %vpi_call 2 19 "$monitor", "t=%3d, x=%b,y=%b,carry=%b,sum=%b", $time, v031a8708_0, v031a3260_0, v031a8658_0, v031a86b0_0 {0 0 0};
+    %end;
+    .thread T_1;
+    .scope S_047f3e40;
+T_2 ;
+    %vpi_call 2 23 "$dumpfile", "half_adder.vcd" {0 0 0};
+    %vpi_call 2 24 "$dumpvars" {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "half_adder.v";
