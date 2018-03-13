@@ -1,0 +1,122 @@
+$date
+	Tue Jan 30 15:12:11 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	10ps
+$end
+$scope module tb_ripple_adder $end
+$var wire 4 ! d [3:0] $end
+$var wire 1 " cout $end
+$var reg 4 # a [3:0] $end
+$var reg 4 $ b [3:0] $end
+$scope module uut $end
+$var wire 4 % a [3:0] $end
+$var wire 4 & b [3:0] $end
+$var wire 4 ' d [3:0] $end
+$var wire 1 " cout $end
+$var wire 1 ( c2 $end
+$var wire 1 ) c1 $end
+$var wire 1 * c0 $end
+$scope module f0 $end
+$var wire 1 + a $end
+$var wire 1 , b $end
+$var wire 1 - cin $end
+$var wire 1 * cout $end
+$var wire 1 . sum $end
+$upscope $end
+$scope module f1 $end
+$var wire 1 / a $end
+$var wire 1 0 b $end
+$var wire 1 * cin $end
+$var wire 1 ) cout $end
+$var wire 1 1 sum $end
+$upscope $end
+$scope module f2 $end
+$var wire 1 2 a $end
+$var wire 1 3 b $end
+$var wire 1 ) cin $end
+$var wire 1 ( cout $end
+$var wire 1 4 sum $end
+$upscope $end
+$scope module f3 $end
+$var wire 1 5 a $end
+$var wire 1 6 b $end
+$var wire 1 ( cin $end
+$var wire 1 " cout $end
+$var wire 1 7 sum $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+17
+06
+15
+14
+03
+02
+01
+10
+1/
+0.
+0-
+0,
+0+
+0*
+1)
+0(
+b1100 '
+b10 &
+b1010 %
+b10 $
+b1010 #
+0"
+b1100 !
+$end
+#2000
+1"
+b100 !
+b100 '
+07
+16
+b1010 $
+b1010 &
+#4000
+1)
+17
+1*
+0"
+01
+b1000 !
+b1000 '
+04
+1(
+1,
+00
+13
+06
+1+
+05
+b101 $
+b101 &
+b11 #
+b11 %
+#6000
+11
+1"
+b1110 !
+b1110 '
+14
+10
+16
+12
+15
+b1111 $
+b1111 &
+b1111 #
+b1111 %
+#8000
