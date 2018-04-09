@@ -1,0 +1,133 @@
+$date
+	Tue Apr 10 04:39:02 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	10ps
+$end
+$scope module tb_divider_8bit $end
+$var wire 8 ! remainder [7:0] $end
+$var wire 8 " quotient [7:0] $end
+$var wire 1 # eop $end
+$var reg 1 $ clk $end
+$var reg 8 % dividend [7:0] $end
+$var reg 8 & divisor [7:0] $end
+$var reg 1 ' rst $end
+$scope module uut $end
+$var wire 1 $ clk $end
+$var wire 8 ( dividend [7:0] $end
+$var wire 8 ) divisor [7:0] $end
+$var wire 1 ' rst $end
+$var reg 8 * divd [7:0] $end
+$var reg 1 # eop $end
+$var reg 8 + quotient [7:0] $end
+$var reg 8 , remainder [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx ,
+bx +
+bx *
+bx )
+bx (
+0'
+bx &
+bx %
+0$
+x#
+bx "
+bx !
+$end
+#500
+0#
+b0 !
+b0 ,
+b0 "
+b0 +
+1'
+#1000
+b1001000 *
+0'
+b1011 &
+b1011 )
+b1001000 %
+b1001000 (
+1$
+#2000
+b111101 !
+b111101 ,
+b1 "
+b1 +
+b111101 *
+0$
+#3000
+1$
+#4000
+b110010 !
+b110010 ,
+b10 "
+b10 +
+b110010 *
+0$
+#5000
+1$
+#6000
+b100111 !
+b100111 ,
+b11 "
+b11 +
+b100111 *
+0$
+#7000
+1$
+#8000
+b11100 !
+b11100 ,
+b100 "
+b100 +
+b11100 *
+0$
+#9000
+1$
+#10000
+b10001 !
+b10001 ,
+b101 "
+b101 +
+b10001 *
+0$
+#11000
+1$
+#12000
+b110 !
+b110 ,
+b110 "
+b110 +
+b110 *
+0$
+#13000
+1$
+#14000
+0#
+0$
+#15000
+1$
+#16000
+0#
+0$
+#17000
+1$
+#18000
+0#
+0$
+#19000
+1$
+#20000
+0#
+0$
+#21000
+1$
