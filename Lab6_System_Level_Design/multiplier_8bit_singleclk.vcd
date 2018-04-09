@@ -1,0 +1,307 @@
+$date
+	Wed Mar 14 09:46:24 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_multiplier_8bit_singleclk $end
+$var wire 16 ! prod [15:0] $end
+$var reg 8 " A [7:0] $end
+$var reg 8 # B [7:0] $end
+$scope module uut $end
+$var wire 8 $ a [7:0] $end
+$var wire 8 % b [7:0] $end
+$var wire 16 & prod [15:0] $end
+$var wire 8 ' partprod4 [7:0] $end
+$var wire 8 ( partprod3 [7:0] $end
+$var wire 8 ) partprod2 [7:0] $end
+$var wire 8 * partprod1 [7:0] $end
+$scope module mult1 $end
+$var wire 4 + aa [3:0] $end
+$var wire 4 , bb [3:0] $end
+$var wire 4 - partprod [3:0] $end
+$var wire 8 . prod [7:0] $end
+$var wire 8 / w4 [7:0] $end
+$var wire 8 0 w3 [7:0] $end
+$var wire 8 1 w2 [7:0] $end
+$var wire 8 2 w1 [7:0] $end
+$upscope $end
+$scope module mult2 $end
+$var wire 4 3 aa [3:0] $end
+$var wire 4 4 bb [3:0] $end
+$var wire 4 5 partprod [3:0] $end
+$var wire 8 6 prod [7:0] $end
+$var wire 8 7 w4 [7:0] $end
+$var wire 8 8 w3 [7:0] $end
+$var wire 8 9 w2 [7:0] $end
+$var wire 8 : w1 [7:0] $end
+$upscope $end
+$scope module mult3 $end
+$var wire 4 ; aa [3:0] $end
+$var wire 4 < bb [3:0] $end
+$var wire 4 = partprod [3:0] $end
+$var wire 8 > prod [7:0] $end
+$var wire 8 ? w4 [7:0] $end
+$var wire 8 @ w3 [7:0] $end
+$var wire 8 A w2 [7:0] $end
+$var wire 8 B w1 [7:0] $end
+$upscope $end
+$scope module mult4 $end
+$var wire 4 C aa [3:0] $end
+$var wire 4 D bb [3:0] $end
+$var wire 4 E partprod [3:0] $end
+$var wire 8 F prod [7:0] $end
+$var wire 8 G w4 [7:0] $end
+$var wire 8 H w3 [7:0] $end
+$var wire 8 I w2 [7:0] $end
+$var wire 8 J w1 [7:0] $end
+$upscope $end
+$scope module para $end
+$var wire 8 K partprod1 [7:0] $end
+$var wire 8 L partprod2 [7:0] $end
+$var wire 8 M partprod3 [7:0] $end
+$var wire 8 N partprod4 [7:0] $end
+$var wire 16 O prod [15:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx O
+b0 N
+bx M
+b0 L
+b11100001 K
+b0 J
+b0 I
+b0 H
+b0 G
+b0 F
+b0 E
+b110 D
+b0 C
+b0xxxx B
+bx A
+bx @
+bx ?
+bx >
+bx =
+b110 <
+b1111 ;
+b0 :
+b0 9
+b0 8
+b0 7
+b0 6
+b0 5
+b1111 4
+b0 3
+b1111 2
+b101101 1
+b1101001 0
+b11100001 /
+b11100001 .
+b1111 -
+b1111 ,
+b1111 +
+b11100001 *
+b0 )
+bx (
+b0 '
+bx &
+b1101111 %
+b1111 $
+b1101111 #
+b1111 "
+bx !
+$end
+#20
+b0xxxx 2
+bx 1
+bx 0
+bx *
+bx .
+bx K
+bx /
+bx -
+b0xxxx :
+bx 9
+bx 8
+bx )
+bx 6
+bx L
+bx 7
+bx 5
+b0xxxx J
+bx I
+bx H
+bx '
+bx F
+bx N
+bx G
+bx E
+b110 ,
+b110 4
+b1001 <
+b1001 D
+b1111 3
+b1111 C
+b10010110 #
+b10010110 %
+b11111111 "
+b11111111 $
+#40
+b0x000 2
+bx000 -
+b0x :
+b0x 5
+b0x000 B
+bx000 =
+b0x J
+b0x E
+b1011 ,
+b1011 4
+b1010 <
+b1010 D
+b1000 +
+b1 3
+b1000 ;
+b1 C
+b10101011 #
+b10101011 %
+b11000 "
+b11000 $
+#60
+bx *
+bx .
+bx K
+bx /
+bx 0
+bx 1
+bx )
+bx 6
+bx L
+bx 7
+bx 8
+bx 9
+b0xx0x 2
+bx0x -
+b0x000 :
+bx000 5
+b0xx0x B
+bx0x =
+b0x000 J
+bx000 E
+b1110 ,
+b1110 4
+b1100 <
+b1100 D
+b1101 +
+b1000 3
+b1101 ;
+b1000 C
+b11001110 #
+b11001110 %
+b10001101 "
+b10001101 $
+#80
+b0 !
+b0 &
+b0 O
+b0 *
+b0 .
+b0 K
+b0 /
+b0 0
+b0 1
+b0 )
+b0 6
+b0 L
+b0 7
+b0 8
+b0 9
+b0 (
+b0 >
+b0 M
+b0 ?
+b0 @
+b0 A
+b0 '
+b0 F
+b0 N
+b0 G
+b0 H
+b0 I
+b0 2
+b0 -
+b0 :
+b0 5
+b0 B
+b0 =
+b0 J
+b0 E
+b0 ,
+b0 4
+b0 <
+b0 D
+b1 +
+b1 3
+b1 ;
+b1 C
+b0 #
+b0 %
+b10001 "
+b10001 $
+#100
+b1100 2
+b100100 1
+b1010100 0
+b10110100 *
+b10110100 .
+b10110100 K
+b10110100 /
+b1100 -
+b100 :
+b1100 9
+b11100 8
+b111100 )
+b111100 6
+b111100 L
+b111100 7
+b100 5
+b0xx00 B
+bx A
+bx @
+bx (
+bx >
+bx M
+bx ?
+bx00 =
+b0x00 J
+bx I
+bx H
+bx !
+bx &
+bx O
+bx '
+bx F
+bx N
+bx G
+b0x00 E
+b1111 ,
+b1111 4
+b11 <
+b11 D
+b1100 +
+b100 3
+b1100 ;
+b100 C
+b111111 #
+b111111 %
+b1001100 "
+b1001100 $
+#220

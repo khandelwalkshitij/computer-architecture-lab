@@ -28,7 +28,12 @@ begin
   adrb = 0;
   repeat( 64 ) 
   begin 
-     #200 adrb = adrb + 8'd1; 
+     #200 adrb = adrb + 8'd1;
+     #200 adrb = adrb + 8'd1;
+     #200 adrb = adrb + 8'd1;
+     #200 adrb = adrb + 8'd1;
+     #200 adrb = adrb + 8'd1;
+     #200 adrb = adrb + 8'd1;
   end 
 end 
 
@@ -53,6 +58,7 @@ input [7:0]din;
 reg [7:0] memory[0:63];
 
 initial $readmemh("data_64.txt",memory);
+initial $writememh("data_64_op.txt",memory);
 
 always@(posedge clk)
 	begin

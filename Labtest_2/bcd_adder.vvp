@@ -1,0 +1,214 @@
+#! c:/iverilog-x86/bin/vvp
+:ivl_version "10.0 (stable)" "(v10_0)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_04619108 .scope module, "tb_bcd_adder" "tb_bcd_adder" 2 5;
+ .timescale -8 -12;
+v046557b8_0 .var "a", 7 0;
+v04655970_0 .var "b", 7 0;
+v04655ad0_0 .net "cout", 0 0, L_0468f400;  1 drivers
+v046559c8_0 .net "s", 7 0, L_0468f3a8;  1 drivers
+S_0461c608 .scope module, "uut" "bcd_adder" 2 10, 2 29 0, S_04619108;
+ .timescale -8 -12;
+    .port_info 0 /OUTPUT 1 "cout"
+    .port_info 1 /OUTPUT 8 "s"
+    .port_info 2 /INPUT 8 "a"
+    .port_info 3 /INPUT 8 "b"
+v04655130_0 .net "a", 7 0, v046557b8_0;  1 drivers
+v04655760_0 .net "b", 7 0, v04655970_0;  1 drivers
+v04655b28_0 .net "cout", 0 0, L_0468f400;  alias, 1 drivers
+v04655918_0 .net "s", 7 0, L_0468f3a8;  alias, 1 drivers
+v046558c0_0 .net "y1", 4 0, L_0468eab8;  1 drivers
+v04655b80_0 .net "y2", 4 0, L_0468f248;  1 drivers
+L_0468e488 .part v046557b8_0, 0, 4;
+L_0468ebc0 .part v04655970_0, 0, 4;
+L_0468ef88 .part v046557b8_0, 4, 4;
+L_0468efe0 .part v04655970_0, 4, 4;
+S_0461c2b8 .scope module, "Add1" "adder_4bit" 2 34, 2 41 0, S_0461c608;
+ .timescale -8 -12;
+    .port_info 0 /OUTPUT 5 "y"
+    .port_info 1 /INPUT 4 "p"
+    .port_info 2 /INPUT 4 "q"
+L_02c4aff8 .functor AND 1, L_04655a78, L_04655868, C4<1>, C4<1>;
+v046188d0_0 .net *"_s0", 3 0, L_04655a20;  1 drivers
+L_04655c68 .functor BUFT 1, C4<0000000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v04618928_0 .net *"_s11", 30 0, L_04655c68;  1 drivers
+L_04655c90 .functor BUFT 1, C4<00000000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v046182f8_0 .net/2u *"_s12", 31 0, L_04655c90;  1 drivers
+v046187c8_0 .net *"_s14", 0 0, L_04655868;  1 drivers
+v04617f88_0 .net *"_s16", 0 0, L_02c4aff8;  1 drivers
+v04618458_0 .net *"_s18", 3 0, L_0468e8a8;  1 drivers
+L_04655c40 .functor BUFT 1, C4<0001>, C4<0>, C4<0>, C4<0>;
+v04618090_0 .net/2u *"_s2", 3 0, L_04655c40;  1 drivers
+L_04655cb8 .functor BUFT 1, C4<1001>, C4<0>, C4<0>, C4<0>;
+v04617e80_0 .net/2u *"_s20", 3 0, L_04655cb8;  1 drivers
+v04618350_0 .net *"_s22", 0 0, L_0468ef30;  1 drivers
+L_04655ce0 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v046180e8_0 .net/2u *"_s24", 0 0, L_04655ce0;  1 drivers
+v04618038_0 .net *"_s26", 3 0, L_0468eed8;  1 drivers
+v04617ed8_0 .net *"_s28", 4 0, L_0468eb68;  1 drivers
+L_04655d08 .functor BUFT 1, C4<1>, C4<0>, C4<0>, C4<0>;
+v04618198_0 .net/2u *"_s30", 0 0, L_04655d08;  1 drivers
+v04618560_0 .net *"_s32", 3 0, L_0468edd0;  1 drivers
+L_04655d30 .functor BUFT 1, C4<0110>, C4<0>, C4<0>, C4<0>;
+v046181f0_0 .net/2u *"_s34", 3 0, L_04655d30;  1 drivers
+v046182a0_0 .net *"_s36", 3 0, L_0468e9b0;  1 drivers
+v046183a8_0 .net *"_s38", 4 0, L_0468e640;  1 drivers
+v046184b0_0 .net *"_s4", 0 0, L_04655a78;  1 drivers
+v046185b8_0 .net *"_s40", 4 0, L_0468ecc8;  1 drivers
+v04618610_0 .net *"_s42", 4 0, L_0468eb10;  1 drivers
+L_04655d58 .functor BUFT 1, C4<1>, C4<0>, C4<0>, C4<0>;
+v04618820_0 .net/2u *"_s44", 0 0, L_04655d58;  1 drivers
+v04618668_0 .net *"_s46", 3 0, L_0468e7f8;  1 drivers
+L_04655d80 .functor BUFT 1, C4<0110>, C4<0>, C4<0>, C4<0>;
+v046186c0_0 .net/2u *"_s48", 3 0, L_04655d80;  1 drivers
+v04618718_0 .net *"_s50", 3 0, L_0468ec70;  1 drivers
+v04617f30_0 .net *"_s52", 4 0, L_0468ec18;  1 drivers
+v04618cf0_0 .net *"_s7", 0 0, L_04655bd8;  1 drivers
+v04618b38_0 .net *"_s8", 31 0, L_04655810;  1 drivers
+v04618df8_0 .net "p", 3 0, L_0468e488;  1 drivers
+v046189d8_0 .net "q", 3 0, L_0468ebc0;  1 drivers
+v04618d48_0 .net "y", 4 0, L_0468eab8;  alias, 1 drivers
+L_04655a20 .arith/sum 4, L_0468e488, L_0468ebc0;
+L_04655a78 .cmp/ge 4, L_04655a20, L_04655c40;
+L_04655bd8 .part L_0468e488, 3, 1;
+L_04655810 .concat [ 1 31 0 0], L_04655bd8, L_04655c68;
+L_04655868 .cmp/eq 32, L_04655810, L_04655c90;
+L_0468e8a8 .arith/sum 4, L_0468e488, L_0468ebc0;
+L_0468ef30 .cmp/gt 4, L_04655cb8, L_0468e8a8;
+L_0468eed8 .arith/sum 4, L_0468e488, L_0468ebc0;
+L_0468eb68 .concat [ 4 1 0 0], L_0468eed8, L_04655ce0;
+L_0468edd0 .arith/sum 4, L_0468e488, L_0468ebc0;
+L_0468e9b0 .arith/sum 4, L_0468edd0, L_04655d30;
+L_0468e640 .concat [ 4 1 0 0], L_0468e9b0, L_04655d08;
+L_0468ecc8 .functor MUXZ 5, L_0468e640, L_0468eb68, L_0468ef30, C4<>;
+L_0468eb10 .concat [ 5 0 0 0], L_0468ecc8;
+L_0468e7f8 .arith/sum 4, L_0468e488, L_0468ebc0;
+L_0468ec70 .arith/sum 4, L_0468e7f8, L_04655d80;
+L_0468ec18 .concat [ 4 1 0 0], L_0468ec70, L_04655d58;
+L_0468eab8 .functor MUXZ 5, L_0468ec18, L_0468eb10, L_02c4aff8, C4<>;
+S_0461c388 .scope module, "Add2" "adder_4bit" 2 35, 2 41 0, S_0461c608;
+ .timescale -8 -12;
+    .port_info 0 /OUTPUT 5 "y"
+    .port_info 1 /INPUT 4 "p"
+    .port_info 2 /INPUT 4 "q"
+L_02c4b430 .functor AND 1, L_0468e4e0, L_0468ea08, C4<1>, C4<1>;
+v04618980_0 .net *"_s0", 3 0, L_0468e698;  1 drivers
+L_04655dd0 .functor BUFT 1, C4<0000000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v04618be8_0 .net *"_s11", 30 0, L_04655dd0;  1 drivers
+L_04655df8 .functor BUFT 1, C4<00000000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v04618b90_0 .net/2u *"_s12", 31 0, L_04655df8;  1 drivers
+v04618a30_0 .net *"_s14", 0 0, L_0468ea08;  1 drivers
+v04618a88_0 .net *"_s16", 0 0, L_02c4b430;  1 drivers
+v04618da0_0 .net *"_s18", 3 0, L_0468ed20;  1 drivers
+L_04655da8 .functor BUFT 1, C4<0001>, C4<0>, C4<0>, C4<0>;
+v04618ae0_0 .net/2u *"_s2", 3 0, L_04655da8;  1 drivers
+L_04655e20 .functor BUFT 1, C4<1001>, C4<0>, C4<0>, C4<0>;
+v04618c40_0 .net/2u *"_s20", 3 0, L_04655e20;  1 drivers
+v04618c98_0 .net *"_s22", 0 0, L_0468e538;  1 drivers
+L_04655e48 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v04655658_0 .net/2u *"_s24", 0 0, L_04655e48;  1 drivers
+v046556b0_0 .net *"_s26", 3 0, L_0468e590;  1 drivers
+v04654e70_0 .net *"_s28", 4 0, L_0468e6f0;  1 drivers
+L_04655e70 .functor BUFT 1, C4<1>, C4<0>, C4<0>, C4<0>;
+v04655398_0 .net/2u *"_s30", 0 0, L_04655e70;  1 drivers
+v04655290_0 .net *"_s32", 3 0, L_0468e748;  1 drivers
+L_04655e98 .functor BUFT 1, C4<0110>, C4<0>, C4<0>, C4<0>;
+v04654e18_0 .net/2u *"_s34", 3 0, L_04655e98;  1 drivers
+v046551e0_0 .net *"_s36", 3 0, L_0468e850;  1 drivers
+v04655550_0 .net *"_s38", 4 0, L_0468ed78;  1 drivers
+v046553f0_0 .net *"_s4", 0 0, L_0468e4e0;  1 drivers
+v046555a8_0 .net *"_s40", 4 0, L_0468ee80;  1 drivers
+v04654c60_0 .net *"_s42", 4 0, L_0468e958;  1 drivers
+L_04655ec0 .functor BUFT 1, C4<1>, C4<0>, C4<0>, C4<0>;
+v04655600_0 .net/2u *"_s44", 0 0, L_04655ec0;  1 drivers
+v04655238_0 .net *"_s46", 3 0, L_0468e900;  1 drivers
+L_04655ee8 .functor BUFT 1, C4<0110>, C4<0>, C4<0>, C4<0>;
+v04655448_0 .net/2u *"_s48", 3 0, L_04655ee8;  1 drivers
+v046552e8_0 .net *"_s50", 3 0, L_0468ea60;  1 drivers
+v04655708_0 .net *"_s52", 4 0, L_0468ee28;  1 drivers
+v04654f20_0 .net *"_s7", 0 0, L_0468e7a0;  1 drivers
+v04654ec8_0 .net *"_s8", 31 0, L_0468e5e8;  1 drivers
+v04655340_0 .net "p", 3 0, L_0468ef88;  1 drivers
+v046554a0_0 .net "q", 3 0, L_0468efe0;  1 drivers
+v046554f8_0 .net "y", 4 0, L_0468f248;  alias, 1 drivers
+L_0468e698 .arith/sum 4, L_0468ef88, L_0468efe0;
+L_0468e4e0 .cmp/ge 4, L_0468e698, L_04655da8;
+L_0468e7a0 .part L_0468ef88, 3, 1;
+L_0468e5e8 .concat [ 1 31 0 0], L_0468e7a0, L_04655dd0;
+L_0468ea08 .cmp/eq 32, L_0468e5e8, L_04655df8;
+L_0468ed20 .arith/sum 4, L_0468ef88, L_0468efe0;
+L_0468e538 .cmp/gt 4, L_04655e20, L_0468ed20;
+L_0468e590 .arith/sum 4, L_0468ef88, L_0468efe0;
+L_0468e6f0 .concat [ 4 1 0 0], L_0468e590, L_04655e48;
+L_0468e748 .arith/sum 4, L_0468ef88, L_0468efe0;
+L_0468e850 .arith/sum 4, L_0468e748, L_04655e98;
+L_0468ed78 .concat [ 4 1 0 0], L_0468e850, L_04655e70;
+L_0468ee80 .functor MUXZ 5, L_0468ed78, L_0468e6f0, L_0468e538, C4<>;
+L_0468e958 .concat [ 5 0 0 0], L_0468ee80;
+L_0468e900 .arith/sum 4, L_0468ef88, L_0468efe0;
+L_0468ea60 .arith/sum 4, L_0468e900, L_04655ee8;
+L_0468ee28 .concat [ 4 1 0 0], L_0468ea60, L_04655ec0;
+L_0468f248 .functor MUXZ 5, L_0468ee28, L_0468e958, L_02c4b430, C4<>;
+S_02c4bef0 .scope module, "BAD" "bcd_adjustment" 2 36, 2 49 0, S_0461c608;
+ .timescale -8 -12;
+    .port_info 0 /OUTPUT 1 "cout"
+    .port_info 1 /OUTPUT 8 "y"
+    .port_info 2 /INPUT 5 "p"
+    .port_info 3 /INPUT 5 "q"
+v04654cb8_0 .net *"_s1", 3 0, L_0468f2a0;  1 drivers
+v04654d10_0 .net *"_s11", 3 0, L_0468f2f8;  1 drivers
+L_04655f10 .functor BUFT 1, C4<000>, C4<0>, C4<0>, C4<0>;
+v04654d68_0 .net/2u *"_s2", 2 0, L_04655f10;  1 drivers
+v04654dc0_0 .net *"_s5", 0 0, L_0468f350;  1 drivers
+v04654fd0_0 .net *"_s6", 3 0, L_0468f1f0;  1 drivers
+v04654f78_0 .net *"_s8", 3 0, L_0468f038;  1 drivers
+v04655188_0 .net "cout", 0 0, L_0468f400;  alias, 1 drivers
+v04655028_0 .net "p", 4 0, L_0468f248;  alias, 1 drivers
+v04655080_0 .net "q", 4 0, L_0468eab8;  alias, 1 drivers
+v046550d8_0 .net "y", 7 0, L_0468f3a8;  alias, 1 drivers
+L_0468f2a0 .part L_0468f248, 0, 4;
+L_0468f350 .part L_0468eab8, 4, 1;
+L_0468f1f0 .concat [ 1 3 0 0], L_0468f350, L_04655f10;
+L_0468f038 .arith/sum 4, L_0468f2a0, L_0468f1f0;
+L_0468f2f8 .part L_0468eab8, 0, 4;
+L_0468f3a8 .concat [ 4 4 0 0], L_0468f2f8, L_0468f038;
+L_0468f400 .part L_0468f248, 4, 1;
+    .scope S_04619108;
+T_0 ;
+    %pushi/vec4 37, 0, 8;
+    %store/vec4 v046557b8_0, 0, 8;
+    %pushi/vec4 82, 0, 8;
+    %store/vec4 v04655970_0, 0, 8;
+    %delay 100000, 0;
+    %pushi/vec4 153, 0, 8;
+    %store/vec4 v046557b8_0, 0, 8;
+    %pushi/vec4 136, 0, 8;
+    %store/vec4 v04655970_0, 0, 8;
+    %delay 100000, 0;
+    %pushi/vec4 147, 0, 8;
+    %store/vec4 v046557b8_0, 0, 8;
+    %pushi/vec4 18, 0, 8;
+    %store/vec4 v04655970_0, 0, 8;
+    %end;
+    .thread T_0;
+    .scope S_04619108;
+T_1 ;
+    %vpi_call 2 19 "$monitor", "t=%3d, a=%8b, b=%8b, cout=%b, s=%8b", $time, v046557b8_0, v04655970_0, v04655ad0_0, v046559c8_0 {0 0 0};
+    %end;
+    .thread T_1;
+    .scope S_04619108;
+T_2 ;
+    %vpi_call 2 23 "$dumpfile", "bcd_adder.vcd" {0 0 0};
+    %vpi_call 2 24 "$dumpvars" {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "bcd_adder_exam.v";
