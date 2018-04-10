@@ -1,0 +1,57 @@
+$date
+	Tue Apr 10 10:31:34 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_priority_encoder42 $end
+$var wire 2 ! Y [1:0] $end
+$var wire 1 " V $end
+$var reg 1 # I0 $end
+$var reg 1 $ I1 $end
+$var reg 1 % I2 $end
+$var reg 1 & I3 $end
+$scope module uut $end
+$var wire 1 # I0 $end
+$var wire 1 $ I1 $end
+$var wire 1 % I2 $end
+$var wire 1 & I3 $end
+$var wire 1 " V $end
+$var wire 1 ' w1 $end
+$var wire 1 ( w2 $end
+$var wire 2 ) Y [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 )
+0(
+1'
+0&
+0%
+0$
+1#
+1"
+b0 !
+$end
+#10
+b1 !
+b1 )
+1(
+1$
+#30
+b11 !
+b11 )
+1&
+#50
+b10 !
+b10 )
+0(
+0'
+1%
+0&
+#150

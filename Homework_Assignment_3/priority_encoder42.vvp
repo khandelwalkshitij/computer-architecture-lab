@@ -1,0 +1,77 @@
+#! c:/iverilog-x64/bin/vvp
+:ivl_version "10.1 (stable)" "(v10_1_1)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0000000004639c00 .scope module, "tb_priority_encoder42" "tb_priority_encoder42" 2 1;
+ .timescale 0 0;
+v000000000468bdc0_0 .var "I0", 0 0;
+v000000000468be60_0 .var "I1", 0 0;
+v000000000468c3b0_0 .var "I2", 0 0;
+v000000000468c310_0 .var "I3", 0 0;
+v000000000468ce50_0 .net "V", 0 0, L_000000000468d3f0;  1 drivers
+v000000000468c950_0 .net "Y", 1 0, L_000000000468c9f0;  1 drivers
+S_00000000046364e0 .scope module, "uut" "priority_encoder42" 2 7, 2 23 0, S_0000000004639c00;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 2 "Y"
+    .port_info 1 /OUTPUT 1 "V"
+    .port_info 2 /INPUT 1 "I0"
+    .port_info 3 /INPUT 1 "I1"
+    .port_info 4 /INPUT 1 "I2"
+    .port_info 5 /INPUT 1 "I3"
+L_000000000468d310 .functor NOT 1, v000000000468c3b0_0, C4<0>, C4<0>, C4<0>;
+L_000000000468d380 .functor AND 1, L_000000000468d310, v000000000468be60_0, C4<1>, C4<1>;
+L_000000000468d3f0 .functor OR 1, v000000000468bdc0_0, v000000000468be60_0, v000000000468c3b0_0, v000000000468c310_0;
+L_000000000468d460 .functor OR 1, v000000000468c3b0_0, v000000000468c310_0, C4<0>, C4<0>;
+L_000000000468d560 .functor OR 1, v000000000468c310_0, L_000000000468d380, C4<0>, C4<0>;
+v0000000004639d80_0 .net "I0", 0 0, v000000000468bdc0_0;  1 drivers
+v0000000004639e20_0 .net "I1", 0 0, v000000000468be60_0;  1 drivers
+v0000000004636660_0 .net "I2", 0 0, v000000000468c3b0_0;  1 drivers
+v0000000004636700_0 .net "I3", 0 0, v000000000468c310_0;  1 drivers
+v00000000046367a0_0 .net "V", 0 0, L_000000000468d3f0;  alias, 1 drivers
+v0000000004636840_0 .net "Y", 1 0, L_000000000468c9f0;  alias, 1 drivers
+v000000000468bab0_0 .net *"_s0", 0 0, L_000000000468d460;  1 drivers
+v000000000468bb50_0 .net *"_s2", 0 0, L_000000000468d560;  1 drivers
+v000000000468bbf0_0 .net "w1", 0 0, L_000000000468d310;  1 drivers
+v000000000468bd20_0 .net "w2", 0 0, L_000000000468d380;  1 drivers
+L_000000000468c9f0 .concat8 [ 1 1 0 0], L_000000000468d560, L_000000000468d460;
+    .scope S_0000000004639c00;
+T_0 ;
+    %delay 0, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000000000468bdc0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000000000468be60_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000000000468c3b0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000000000468c310_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000000000468be60_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000000000468c310_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000000000468c310_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000000000468c3b0_0, 0, 1;
+    %delay 100, 0;
+    %vpi_call 2 14 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0000000004639c00;
+T_1 ;
+    %vpi_call 2 18 "$dumpfile", "priority_encoder42.vcd" {0 0 0};
+    %vpi_call 2 19 "$dumpvars" {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "priority_encoder42.v";
