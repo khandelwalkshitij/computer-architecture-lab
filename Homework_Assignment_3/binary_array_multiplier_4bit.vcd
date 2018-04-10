@@ -1,0 +1,172 @@
+$date
+	Tue Apr 10 12:50:40 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_binary_array_multiplier_4bit $end
+$var wire 8 ! out [7:0] $end
+$var reg 4 " x [3:0] $end
+$var reg 4 # y [3:0] $end
+$scope module uut $end
+$var wire 4 $ x [3:0] $end
+$var wire 4 % y [3:0] $end
+$var wire 6 & sum [5:0] $end
+$var wire 8 ' out [7:0] $end
+$var wire 11 ( carry [10:0] $end
+$var wire 15 ) andout [15:1] $end
+$scope module FA01 $end
+$var wire 1 * a $end
+$var wire 1 + b $end
+$var wire 1 , cin $end
+$var wire 1 - cout $end
+$var wire 1 . sum $end
+$upscope $end
+$scope module FA02 $end
+$var wire 1 / a $end
+$var wire 1 0 b $end
+$var wire 1 1 cin $end
+$var wire 1 2 cout $end
+$var wire 1 3 sum $end
+$upscope $end
+$scope module FA03 $end
+$var wire 1 4 a $end
+$var wire 1 5 b $end
+$var wire 1 6 cin $end
+$var wire 1 7 cout $end
+$var wire 1 8 sum $end
+$upscope $end
+$scope module FA11 $end
+$var wire 1 9 a $end
+$var wire 1 : b $end
+$var wire 1 ; cin $end
+$var wire 1 < cout $end
+$var wire 1 = sum $end
+$upscope $end
+$scope module FA12 $end
+$var wire 1 > a $end
+$var wire 1 ? b $end
+$var wire 1 @ cin $end
+$var wire 1 A cout $end
+$var wire 1 B sum $end
+$upscope $end
+$scope module FA13 $end
+$var wire 1 C a $end
+$var wire 1 D b $end
+$var wire 1 E cin $end
+$var wire 1 F cout $end
+$var wire 1 G sum $end
+$upscope $end
+$scope module FA22 $end
+$var wire 1 H a $end
+$var wire 1 I b $end
+$var wire 1 J cin $end
+$var wire 1 K cout $end
+$var wire 1 L sum $end
+$upscope $end
+$scope module FA23 $end
+$var wire 1 M a $end
+$var wire 1 N b $end
+$var wire 1 O cin $end
+$var wire 1 P cout $end
+$var wire 1 Q sum $end
+$upscope $end
+$scope module HA01 $end
+$var wire 1 R a $end
+$var wire 1 S b $end
+$var wire 1 T carry $end
+$var wire 1 U sum $end
+$upscope $end
+$scope module HA02 $end
+$var wire 1 V a $end
+$var wire 1 W b $end
+$var wire 1 X carry $end
+$var wire 1 Y sum $end
+$upscope $end
+$scope module HA03 $end
+$var wire 1 Z a $end
+$var wire 1 [ b $end
+$var wire 1 \ carry $end
+$var wire 1 ] sum $end
+$upscope $end
+$scope module HA11 $end
+$var wire 1 ^ a $end
+$var wire 1 _ b $end
+$var wire 1 ` carry $end
+$var wire 1 a sum $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1a
+0`
+0_
+1^
+1]
+0\
+1[
+0Z
+0Y
+1X
+1W
+1V
+1U
+0T
+1S
+0R
+0Q
+1P
+0O
+1N
+1M
+0L
+1K
+1J
+1I
+0H
+0G
+0F
+0E
+0D
+0C
+0B
+1A
+1@
+0?
+1>
+0=
+0<
+0;
+0:
+09
+18
+07
+06
+15
+04
+03
+12
+11
+10
+0/
+1.
+0-
+0,
+1+
+0*
+b101110111011000 )
+b11110000 (
+b10011010 '
+b101 &
+b1110 %
+b1011 $
+b1110 #
+b1011 "
+b10011010 !
+$end
+#10
