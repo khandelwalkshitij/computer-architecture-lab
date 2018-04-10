@@ -1,0 +1,362 @@
+$date
+	Tue Apr 10 11:29:18 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_serial_adder $end
+$var wire 4 ! out [3:0] $end
+$var reg 1 " clk $end
+$var reg 4 # in1 [3:0] $end
+$var reg 4 $ in2 [3:0] $end
+$var reg 1 % load $end
+$var reg 1 & rst $end
+$scope module uut $end
+$var wire 1 " clk $end
+$var wire 4 ' in1 [3:0] $end
+$var wire 4 ( in2 [3:0] $end
+$var wire 1 % load $end
+$var wire 1 & rst $end
+$var wire 1 ) sum $end
+$var wire 4 * out [3:0] $end
+$var wire 1 + data2 $end
+$var wire 1 , data1 $end
+$var wire 1 - cout $end
+$var wire 1 . cin $end
+$scope module dff $end
+$var wire 1 " clk $end
+$var wire 1 & rst $end
+$var wire 1 - d $end
+$var reg 1 . q $end
+$upscope $end
+$scope module fa $end
+$var wire 1 . cin $end
+$var wire 1 - cout $end
+$var wire 1 ) sum $end
+$var wire 1 + b $end
+$var wire 1 , a $end
+$upscope $end
+$scope module p1 $end
+$var wire 1 " clk $end
+$var wire 4 / datain [3:0] $end
+$var wire 1 % load $end
+$var reg 1 , dataout $end
+$var reg 4 0 hold [3:0] $end
+$upscope $end
+$scope module p2 $end
+$var wire 1 " clk $end
+$var wire 4 1 datain [3:0] $end
+$var wire 1 % load $end
+$var reg 1 + dataout $end
+$var reg 4 2 hold [3:0] $end
+$upscope $end
+$scope module s1 $end
+$var wire 1 " clk $end
+$var wire 1 ) datain $end
+$var wire 1 & rst $end
+$var reg 4 3 dataout [3:0] $end
+$var reg 4 4 hold [3:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx 4
+bx 3
+b111 2
+b111 1
+b110 0
+b110 /
+x.
+x-
+x,
+x+
+bx *
+x)
+b111 (
+b110 '
+1&
+0%
+b111 $
+b110 #
+0"
+bx !
+$end
+#5
+b0 !
+b0 *
+b0 3
+0.
+b0 4
+1%
+0&
+#10
+0-
+1)
+b11 0
+0,
+b11 2
+1+
+1"
+#15
+b111 2
+b110 0
+0%
+1&
+#20
+0"
+#30
+b1 !
+b1 *
+b1 3
+b1 4
+b11 2
+b11 0
+1"
+#40
+0"
+#50
+1-
+0)
+b11 !
+b11 *
+b11 3
+b11 4
+b1 0
+1,
+b1 2
+1"
+#60
+0"
+#70
+1)
+b110 !
+b110 *
+b110 3
+1.
+b110 4
+b0 2
+b0 0
+1"
+#80
+0"
+#90
+0-
+b1101 !
+b1101 *
+b1101 3
+b1101 4
+0,
+0+
+1"
+#100
+0"
+#110
+0)
+b1011 !
+b1011 *
+b1011 3
+0.
+b1011 4
+1"
+#120
+0"
+#130
+b110 !
+b110 *
+b110 3
+b110 4
+1"
+#140
+0"
+#150
+b1100 !
+b1100 *
+b1100 3
+b1100 4
+1"
+#160
+0"
+#170
+b1000 !
+b1000 *
+b1000 3
+b1000 4
+1"
+#180
+0"
+#190
+b0 !
+b0 *
+b0 3
+b0 4
+1"
+#200
+0"
+#210
+1"
+#220
+0"
+#230
+1"
+#240
+0"
+#250
+1"
+#260
+0"
+#270
+1"
+#280
+0"
+#290
+1"
+#300
+0"
+#310
+1"
+#320
+0"
+#330
+1"
+#340
+0"
+#350
+1"
+#360
+0"
+#370
+1"
+#380
+0"
+#390
+1"
+#400
+0"
+#410
+1"
+#420
+0"
+#430
+1"
+#440
+0"
+#450
+1"
+#460
+0"
+#470
+1"
+#480
+0"
+#490
+1"
+#500
+0"
+#510
+1"
+#520
+0"
+#530
+1"
+#540
+0"
+#550
+1"
+#560
+0"
+#570
+1"
+#580
+0"
+#590
+1"
+#600
+0"
+#610
+1"
+#620
+0"
+#630
+1"
+#640
+0"
+#650
+1"
+#660
+0"
+#670
+1"
+#680
+0"
+#690
+1"
+#700
+0"
+#710
+1"
+#720
+0"
+#730
+1"
+#740
+0"
+#750
+1"
+#760
+0"
+#770
+1"
+#780
+0"
+#790
+1"
+#800
+0"
+#810
+1"
+#820
+0"
+#830
+1"
+#840
+0"
+#850
+1"
+#860
+0"
+#870
+1"
+#880
+0"
+#890
+1"
+#900
+0"
+#910
+1"
+#920
+0"
+#930
+1"
+#940
+0"
+#950
+1"
+#960
+0"
+#970
+1"
+#980
+0"
+#990
+1"
+#1000
+0"
+#1010
+1"
+#1015
